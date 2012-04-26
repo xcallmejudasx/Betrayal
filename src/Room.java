@@ -4,8 +4,11 @@ public class Room {
 	private boolean east;
 	private boolean south;
 	private boolean west;
+	private boolean card;
+	private boolean up;
+	private boolean down;
+	private String cardType;
 	private String name;
-	private String card;
 
 	//default constructor creates an empty room with 4 exits
 	public Room(){
@@ -14,14 +17,23 @@ public class Room {
 		this.east = true;
 		this.south = true;
 		this.west = true;
-		this.card = null;
+		this.up = false;
+		this.down = false;
+		this.card = false;
+		this.cardType = "";
 	}
 	
 	public boolean hasCard(){
-		if(this.card != null){
-			return true;
+		return this.card;
+	}
+	
+	public String getCardType(){
+		if(this.hasCard()){
+			return this.cardType;
 		}else{
-			return false;
+			return "None";
 		}
 	}
+	
+	
 }
