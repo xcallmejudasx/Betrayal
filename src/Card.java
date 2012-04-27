@@ -12,8 +12,5 @@ public class Card {
 		this.ability = "";
 	}
 	
-	//implement ability to use a card array.
-		//add()
-		//remove()
-		//contains() --used to check for Omen/Event card usually. Most card[] will be a couple items that were dropped
+
 }

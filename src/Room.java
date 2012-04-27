@@ -1,16 +1,22 @@
 
 public class Room {
+	private String name;
 	private int orientation;
+	private boolean ground;
+	private boolean upstairs;
+	private boolean basement;
 	private boolean card;
 	private String cardType;
-	private String name;
 	private int x, y, z;
-	private Card[] contents;
-
+	private Deck contents;
+	
 	//default constructor creates an empty room with 4 exits
 	public Room(){
 		this.name = "";
 		this.orientation = 0;
+		this.ground = false;
+		this.upstairs = false;
+		this.basement = false;
 		this.card = false;
 		this.cardType = "";
 		this.x = (Integer) null;
@@ -82,7 +88,7 @@ public class Room {
 	}
 	
 	//TODO should fix this so we aren't returning null for empty rooms, or I guess null can be the accepted empty case...
-	public Card[] getContents(){
+	public Deck getContents(){
 		return this.contents;
 	}
 	
